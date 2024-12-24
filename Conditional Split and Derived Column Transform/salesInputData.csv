@@ -1,0 +1,7 @@
+OrderID,CustomerName,OrderDate,Region,OrderAmount
+1,John Doe,2024-01-15,US,1500
+2,Jane Smith,2024-02-10,EU,750
+3,Alice Johnson,2024-03-05,US,300
+4,Bob Brown,2024-04-01,Other,1200
+5,Mike Davis,2024-04-20,EU,450
+6,Sarah White,2024-05-15,US,800

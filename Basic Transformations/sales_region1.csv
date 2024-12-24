@@ -1,0 +1,6 @@
+SalesID,Region,Salesperson,Product,Amount
+1,North,John,Widget A,250
+2,South,Jane,Widget B,300
+3,East,Emily,Widget A,400
+4,North,John,Widget B,150
+5,West,Daniel,Widget C,200
