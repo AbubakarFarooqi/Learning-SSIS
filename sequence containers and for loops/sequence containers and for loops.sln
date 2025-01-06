@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "sequence containers and for loops", "sequence containers and for loops\sequence containers and for loops.dtproj", "{D4C94B49-909C-4FEC-A454-A3F9224DAAC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4C94B49-909C-4FEC-A454-A3F9224DAAC0}.Development|Default.ActiveCfg = Development
+		{D4C94B49-909C-4FEC-A454-A3F9224DAAC0}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97EAF6E6-6E96-4E66-98DA-40DFF6BA1C72}
+	EndGlobalSection
+EndGlobal
