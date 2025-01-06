@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-9RU8N8A_SQLEXPRESS.TestWebApi1"
+  DTS:DTSID="{8D914C3F-99CB-4B70-A585-515683F5B4C4}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-9RU8N8A\SQLEXPRESS;Initial Catalog=TestWebApi;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Foreach Example Tast-{8D914C3F-99CB-4B70-A585-515683F5B4C4}DESKTOP-9RU8N8A\SQLEXPRESS.TestWebApi1;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

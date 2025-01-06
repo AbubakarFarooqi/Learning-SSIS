@@ -1,0 +1,820 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/6/2025 12:23:22 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-9RU8N8A"
+  DTS:CreatorName="DESKTOP-9RU8N8A\Abubakar 2021-CS-171"
+  DTS:DTSID="{2EB1E8EC-679A-49CA-85E0-9699F5E17851}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="8192"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{9D2D516B-024C-4015-914A-4C4AA032F2CB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-9RU8N8A\SQLEXPRESS.TestWebApi]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{584C7FD5-69B8-47DC-BD25-C8FA503A66C1}"
+      DTS:ObjectName="DESKTOP-9RU8N8A\SQLEXPRESS.TestWebApi">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-9RU8N8A\SQLEXPRESS;Initial Catalog=TestWebApi;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{3717DD0C-2D2B-4E07-93C9-39C58B9CB160}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ExcelFilePath">@[User::CSVpath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\bscs\Techlogix Internship\Data Engineer\Foreach Example Tast\;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7AC85724-EBEF-454C-96F5-A431EDCBF15F}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CSVpath">
+      <DTS:VariableValue
+        DTS:DataType="8">D:\bscs\Techlogix Internship\Data Engineer\Foreach Example Tast\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{48CFC236-6679-4D41-B62D-45DCFD6B0BF0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="EmployeeDetail">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{89DAE0B2-9BCC-4C64-9F8C-067B31A8CD3D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="EmployeeList">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C994449E-0351-4F3A-A268-58471913519C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="EmployeeName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E5681CA1-46E5-4EBE-84C3-7228FFF33634}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="id">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Get Employees ist"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0E80B9F0-8AB3-46F3-98E7-0907225BFCD2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get Employees ist"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{8D914C3F-99CB-4B70-A585-515683F5B4C4}"
+          SQLTask:SqlStatementSource="SELECT EmployeeID, EmployeeName FROM EmployeeList&#xA;"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::EmployeeList" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Loop Over Employee List"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{0CE87CF6-096E-426A-A410-CD55391C4B77}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loop Over Employee List">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachADOEnumerator"
+        DTS:DTSID="{C8AFD8E3-2AE8-470C-8ECE-C97680C2E808}"
+        DTS:ObjectName="{C8AFD8E3-2AE8-470C-8ECE-C97680C2E808}">
+        <DTS:ObjectData>
+          <FEEADO
+            EnumType="EnumerateRowsInFirstTable"
+            VarName="User::EmployeeList" />
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Loop Over Employee List\Create Csv path"
+          DTS:CreationName="Microsoft.ExpressionTask"
+          DTS:Description="Expression Task"
+          DTS:DTSID="{0B231B72-1FFC-48DF-BE34-DF4C4BF8BA34}"
+          DTS:ExecutableType="Microsoft.ExpressionTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Csv path"
+          DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExpressionTask
+              Expression="@[User::CSVpath] =  @[User::CSVpath] +  @[User::EmployeeName]+&quot;.xls&quot;" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Loop Over Employee List\Create Excel Sheet"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{47717CBB-3FAF-4C96-96CA-A3FC98531BCC}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Excel Sheet"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{3717DD0C-2D2B-4E07-93C9-39C58B9CB160}"
+              SQLTask:SqlStatementSource="CREATE TABLE `Excel Destination` (&#xA;    `EmployeeID` INT,&#xA;    `Department` NVARCHAR(50),&#xA;    `Salary` NUMERIC (10,2),&#xA;    `EmployeeName` NVARCHAR(50)&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:DelayValidation="True"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{D3AD6ABF-707B-4B72-83EB-84AE6B3FE951}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Fetch Employee Detail And Make CSV"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination"
+                  componentClassID="Microsoft.ExcelDestination"
+                  contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Excel Destination"
+                  name="Excel Destination"
+                  usesDispositions="true">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">Excel_Destination</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="Excel Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].Columns[EmployeeID]"
+                          cachedDataType="i4"
+                          cachedName="EmployeeID"
+                          externalMetadataColumnId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[EmployeeID]"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeID]" />
+                        <inputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].Columns[Department]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Department"
+                          externalMetadataColumnId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[Department]"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Department]" />
+                        <inputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].Columns[Salary]"
+                          cachedDataType="numeric"
+                          cachedName="Salary"
+                          cachedPrecision="10"
+                          cachedScale="2"
+                          externalMetadataColumnId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[Salary]"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Salary]" />
+                        <inputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].Columns[EmployeeName]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="EmployeeName"
+                          externalMetadataColumnId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[EmployeeName]"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeName]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[EmployeeID]"
+                          dataType="wstr"
+                          length="255"
+                          name="EmployeeID" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[Department]"
+                          dataType="wstr"
+                          length="255"
+                          name="Department" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[Salary]"
+                          dataType="wstr"
+                          length="255"
+                          name="Salary" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input].ExternalColumns[EmployeeName]"
+                          dataType="wstr"
+                          length="255"
+                          name="EmployeeName" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Outputs[Excel Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Excel Destination Error Output"
+                      synchronousInputId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[EmployeeDetails]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT el.EmployeeID, EmployeeName,Department, Salary 
+FROM EmployeeDetails ed 
+join EmployeeList el on el.EmployeeId = ed.EmployeeId
+WHERE el.EmployeeID = ?</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping">"0:Input",{E5681CA1-46E5-4EBE-84C3-7228FFF33634};</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[DESKTOP-9RU8N8A\SQLEXPRESS.TestWebApi]"
+                      connectionManagerRefId="Package.ConnectionManagers[DESKTOP-9RU8N8A\SQLEXPRESS.TestWebApi]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeID]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeID]"
+                          name="EmployeeID"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Department]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Department]"
+                          length="50"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Department]"
+                          name="Department"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Salary]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Salary]"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[Salary]"
+                          name="Salary"
+                          precision="10"
+                          scale="2"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EmployeeName]"
+                          length="50"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].Columns[EmployeeName]"
+                          name="EmployeeName"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
+                          dataType="i4"
+                          name="EmployeeID" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Department]"
+                          dataType="wstr"
+                          length="50"
+                          name="Department" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Salary]"
+                          dataType="numeric"
+                          name="Salary"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EmployeeName]"
+                          dataType="wstr"
+                          length="50"
+                          name="EmployeeName" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EmployeeID]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EmployeeID]"
+                          name="EmployeeID" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EmployeeName]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EmployeeName]"
+                          name="EmployeeName" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Department]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Department]"
+                          name="Department" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Salary]"
+                          dataType="numeric"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Salary]"
+                          name="Salary"
+                          precision="10"
+                          scale="2" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV.Paths[OLE DB Source Output]"
+                  endId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination.Inputs[Excel Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Loop Over Employee List\Reset CSV file path"
+          DTS:CreationName="Microsoft.ExpressionTask"
+          DTS:Description="Expression Task"
+          DTS:DTSID="{683A2BCE-BF98-411B-9CCC-AB2299B777EB}"
+          DTS:ExecutableType="Microsoft.ExpressionTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Reset CSV file path"
+          DTS:TaskContact="Expression Task;Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExpressionTask
+              Expression="@[User::CSVpath] = &quot;D:\\bscs\\Techlogix Internship\\Data Engineer\\Foreach Example Tast\\&quot;" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Loop Over Employee List.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{99188696-6052-4B0B-A1AD-AB08EC79AA28}"
+          DTS:From="Package\Loop Over Employee List\Create Csv path"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Loop Over Employee List\Create Excel Sheet" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Loop Over Employee List.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{A30BEA09-3E53-43C0-9896-62C8100108C2}"
+          DTS:From="Package\Loop Over Employee List\Create Excel Sheet"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Loop Over Employee List.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{06ADF398-DE7A-4E07-96CC-E96931CD41EF}"
+          DTS:From="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Loop Over Employee List\Reset CSV file path" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{FFCD0263-0664-4347-B8B3-2387BCE32D98}"
+          DTS:ObjectName="{FFCD0263-0664-4347-B8B3-2387BCE32D98}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::id" />
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{80ACDDE0-3405-40AA-BF16-156E1E88F85D}"
+          DTS:ObjectName="{80ACDDE0-3405-40AA-BF16-156E1E88F85D}"
+          DTS:ValueIndex="1"
+          DTS:VariableName="User::EmployeeName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{1BB2F87B-244A-4135-8F2A-AE7C21F112AF}"
+      DTS:From="Package\Get Employees ist"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Loop Over Employee List" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Get Employees ist"
+          TopLeft="190.55554514406,49.6888885433585" />
+        <NodeLayout
+          Size="256.8,41.6"
+          Id="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV"
+          TopLeft="40.911099303321,152.93333093471" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Loop Over Employee List\Create Csv path"
+          TopLeft="67.0222089877841,10.133331935141" />
+        <NodeLayout
+          Size="168,41.6"
+          Id="Package\Loop Over Employee List\Create Excel Sheet"
+          TopLeft="85.9110968446297,81.2444431748214" />
+        <EdgeLayout
+          Id="Package\Loop Over Employee List.PrecedenceConstraints[Constraint]"
+          TopLeft="143.822208987784,51.733331935141">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="26.0888878568456,29.5111112396804"
+              Start="0,0"
+              End="26.0888878568456,22.0111112396804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.7555556198402" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.7555556198402"
+                    Point2="0,14.7555556198402"
+                    Point3="4,14.7555556198402" />
+                  <mssgle:LineSegment
+                    End="22.0888878568456,14.7555556198402" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.0888878568456,14.7555556198402"
+                    Point2="26.0888878568456,14.7555556198402"
+                    Point3="26.0888878568456,18.7555556198402" />
+                  <mssgle:LineSegment
+                    End="26.0888878568456,22.0111112396804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Loop Over Employee List.PrecedenceConstraints[Constraint 1]"
+          TopLeft="169.611098073975,122.844443174821">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.0888877598885"
+              Start="0,0"
+              End="0,22.5888877598885">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5888877598885" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\Loop Over Employee List\Reset CSV file path"
+          TopLeft="84.7999857942269,234.311108829004" />
+        <EdgeLayout
+          Id="Package\Loop Over Employee List.PrecedenceConstraints[Constraint 2]"
+          TopLeft="169.255542548774,194.53333093471">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.7777778942941"
+              Start="0,0"
+              End="0,32.2777778942941">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.2777778942941" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="369.6,331.2"
+          Size="369.6,374.4"
+          Id="Package\Loop Over Employee List"
+          TopLeft="174.999990438422,149.066665630076" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="272.95554514406,91.2888885433586">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.8444452943625,57.7777770867172"
+              Start="0,0"
+              End="86.8444452943625,50.2777770867172">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.8888885433586" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.8888885433586"
+                    Point2="0,28.8888885433586"
+                    Point3="4,28.8888885433586" />
+                  <mssgle:LineSegment
+                    End="82.8444452943625,28.8888885433586" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.8444452943625,28.8888885433586"
+                    Point2="86.8444452943625,28.8888885433586"
+                    Point3="86.8444452943625,32.8888885433586" />
+                  <mssgle:LineSegment
+                    End="86.8444452943625,50.2777770867172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source"
+          TopLeft="227.596141410849,47.4333330034878" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination"
+          TopLeft="226.249987638245,191.533332001435" />
+        <EdgeLayout
+          Id="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV.Paths[OLE DB Source Output]"
+          TopLeft="304.723064524547,89.0333330034878">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,102.499998997947"
+              Start="0,0"
+              End="0,94.9999989979467">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,94.9999989979467" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Loop Over Employee List\Fetch Employee Detail And Make CSV\Excel Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
